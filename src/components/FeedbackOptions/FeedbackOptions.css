@@ -1,0 +1,19 @@
+.FeedbackBtnsControl {
+    display: flex;
+    padding: 10px;
+}
+
+.BtnControl {
+    width: 100px;
+    height: 30px;
+    margin-right: 10px;
+    border:none;
+    background: grey;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+}
+.BtnControl:hover  {
+    background-color: lightgray;
+    color: black;
+}

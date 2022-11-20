@@ -1,0 +1,8 @@
+.StatisticsBox{
+    display: flex;
+    flex-direction: column;
+ align-items: flex-start; 
+}
+.StatisticsTitle {
+    font-weight: bold;
+}
