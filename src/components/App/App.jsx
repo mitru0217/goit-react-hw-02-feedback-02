@@ -39,7 +39,7 @@ class App extends Component {
     const total = good + neutral + bad;
     const positivePercentage = Math.trunc(((good * 0.1) / total) * 1000);
     return (
-      <div className='Container'>
+      <div className="Container">
         <Section title="Upload stats">
           <FeedbackOtions
             onGood={this.handleGood}
@@ -50,6 +50,7 @@ class App extends Component {
             <span className="StatisticsTitle">No Feedback given</span>
           ) : (
             <div className="Statistic__option">
+              <h2>Statistics</h2>
               <Statistics
                 good={good}
                 neutral={neutral}
