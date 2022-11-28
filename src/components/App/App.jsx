@@ -16,23 +16,32 @@ class App extends Component {
     neutral: this.props.initialNeutral,
     bad: this.props.initialBad,
   };
-  handleGood = () => {
-    this.setState(prevState => ({
-      good: prevState.good + 1,
-    }));
+  onHandle = () => {
+    const values = Object.values(this.state);
+    console.log(values);
+    const keys = Object.keys(this.state);
+    console.log(keys);
+
+    this.setState(() => ({}));
   };
 
-  handleNeutral = () => {
-    this.setState(prevState => ({
-      neutral: prevState.neutral + 1,
-    }));
-  };
+  // handleGood = () => {
+  //   this.setState(prevState => ({
+  //     good: prevState.good + 1,
+  //   }));
+  // };
 
-  handleBad = () => {
-    this.setState(prevState => ({
-      bad: prevState.bad + 1,
-    }));
-  };
+  // handleNeutral = () => {
+  //   this.setState(prevState => ({
+  //     neutral: prevState.neutral + 1,
+  //   }));
+  // };
+
+  // handleBad = () => {
+  //   this.setState(prevState => ({
+  //     bad: prevState.bad + 1,
+  //   }));
+  // };
 
   render() {
     const { good, neutral, bad } = this.state;
@@ -41,11 +50,16 @@ class App extends Component {
     return (
       <div className="Container">
         <Section title="Upload stats">
-          <FeedbackOtions
+          {/* <FeedbackOtions
             onGood={this.handleGood}
             onNeutral={this.handleNeutral}
             onBad={this.handleBad}
+          /> */}
+          <FeedbackOtions
+            options={['good', 'neutral', 'bad']}
+            onLeaveFeedback={this.onHandle}
           />
+
           {total === 0 ? (
             <span className="StatisticsTitle">No Feedback given</span>
           ) : (
