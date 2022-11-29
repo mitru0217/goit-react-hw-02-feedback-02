@@ -5,12 +5,12 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
     <ul className="FeedbackOptionsList">
       {options.map(option => (
-        <li>
+        <li key={option}>
           <button
             type="button"
             className="BtnControl"
             onClick={() => {
-              onLeaveFeedback(options);
+              onLeaveFeedback(option);
             }}
           >
             {option}
